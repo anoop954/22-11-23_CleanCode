@@ -28,15 +28,16 @@ public bool IsShopOpen(string day)
 
 }
 
+
+var openDays = new HashSet<string>()
+{
+    "friday",
+    "saturday",
+    "sunday"
+};
+
 public bool IsShopOpen(string day)
 {
-    var openDays = new HashSet<string>()
-    {
-        "friday",
-        "saturday",
-        "sunday"
-    };
-
     day = day.ToLower();
     if (openDays.Contains(day))
     {
